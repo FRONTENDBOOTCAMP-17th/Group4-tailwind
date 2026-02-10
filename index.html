@@ -1,29 +1,316 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko-KR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>프로젝트 - Tailwindcss</title>
-    <link rel="icon" href="/vite.svg" />
-    <link
-      rel="preload"
-      as="font"
-      href="/font/woff2/PretendardVariable.woff2"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <meta property="og:url" content="https://group4-tailwindcss.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="우리들의 택시 - UT [Group4] with TailwindCSS" />
+    <meta property="og:description" content="멋사 프론트엔드 17기 회고 4조의 UT 프로젝트를 TailwindCSS를 사용하여 다시 제작한 페이지입니다." />
+    <meta property="og:image" content="https://group4-tailwindcss.netlify.app/logo.png" />
+    <title>우리들의 택시 - UT [Group4] with TailwindCSS</title>
+    <link rel="shortcut icon" sizes="192x192" href="/logo.svg" media="(prefers-color-scheme: light)" />
+    <link rel="shortcut icon" sizes="192x192" href="/logo-dark.svg" media="(prefers-color-scheme: dark)" />
+    <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/font/pretendardvariable.css" />
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
-    <h1>Vite + Tailwindcss</h1>
-    <ul>
-      <li>컴포넌트를 분리해서 구현해주세요.</li>
-      <li>컴포넌트의 코드 리뷰를 AI를 통해 받은 후 개선해보세요.</li>
-      <li>개선점을 문서화하여 정리해 보세요</li>
-      <li>구현한 컴포넌트를 기반으로 페이지를 만들어주세요.</li>
-      <li>접근성과 성능을 신경써주세요</li>
-      <li>소통하고 화합하며 프로젝트 즐겨주세요.</li>
-      <li>결과보다 과정이 중요합니다.‼️</li>
-    </ul>
+    <div class="mx-auto grid gap-4 grid-cols-[8px_repeat(10,minmax(18px,1fr))_8px] md:grid-cols-[16px_repeat(10,minmax(45px,1fr))_16px] xl:grid-cols-12">
+      <!-- 여기에 템플릿 코드 작성 / subgrid로 12컬럼 그리드 배치를 상속받고 템플릿의 배치를 해당 그리드 안에서 하면 됨-->
+      <header class="grid grid-cols-subgrid col-span-full bg-black text-white xl:py-3">
+        <nav class="col-start-2 -col-end-2 grid grid-cols-subgrid items-center py-3 xl:px-16">
+          <div class="col-span-2 flex items-center gap-4">
+            <!-- 로고 -->
+            <a href="#" aria-label="홈으로 이동">
+              <div class="w-10 mr-6">
+                <img src="/public/logo-dark.svg" alt="" />
+              </div>
+            </a>
+            <!-- 메뉴 -->
+            <div class="hidden xl:block">
+              <ul class="flex gap-1 whitespace-nowrap font-bold">
+                <li>
+                  <div class="nav-content">
+                    <a href="#">안전</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="nav-content">
+                    <a href="#">고객 지원</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="nav-content">
+                    <a href="#">기업 정보</a>
+                    <button class="cursor-pointer" aria-label="하위 메뉴 열기" aria-expanded="false">
+                      <svg class="w-6 h-6 block" data-icon="down" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <path d="M18 9L12 15L6 9" stroke="white" stroke-width="2" />
+                      </svg>
+                      <svg class="w-6 h-6 hidden" viewBox="0 0 24 24" data-icon="up" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <path d="M18 15L12 9L6 15" stroke="white" stroke-width="2" />
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="nav-content">
+                    <a href="#">차량 서비스</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="nav-content">
+                    <a href="#">기사지원</a>
+                    <button class="cursor-pointer" aria-label="하위 메뉴 열기" aria-expanded="false">
+                      <svg class="w-6 h-6 block" data-icon="down" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <path d="M18 9L12 15L6 9" stroke="white" stroke-width="2" />
+                      </svg>
+                      <svg class="w-6 h-6 hidden" viewBox="0 0 24 24" data-icon="up" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <path d="M18 15L12 9L6 15" stroke="white" stroke-width="2" />
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 언어 -->
+          <div class="col-start-4 -col-end-1 justify-self-end flex items-center gap-3">
+            <div class="hidden xl:block whitespace-nowrap">
+              <button class="flex items-center gap-1 uppercase cursor-pointer" type="button" aria-label="언어 선택 메뉴" aria-haspopup="listbox" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                  <path
+                    d="M19.5 6L18.0333 7.1C17.6871 7.35964 17.2661 7.5 16.8333 7.5H13.475C12.8775 7.5 12.3312 7.83761 12.064 8.37206C11.7342 9.03161 11.9053 9.83161 12.476 10.2986L14.476 11.9349C16.0499 13.2227 16.8644 15.22 16.6399 17.2412L16.6199 17.4206C16.5403 18.1369 16.3643 18.8392 16.0967 19.5083L15.5 21"
+                    stroke="currentColor"
+                  />
+                  <path d="M2.5 10.5L5.7381 9.96032C7.09174 9.73471 8.26529 10.9083 8.03968 12.2619L7.90517 13.069C7.66434 14.514 8.3941 15.9471 9.70437 16.6022C10.7535 17.1268 11.2976 18.3097 11.0131 19.4476L10.5 21.5" stroke="currentColor" />
+                  <circle cx="12" cy="12" r="9.5" stroke="currentColor" />
+                </svg>
+                <span class="inline-flex">ko-kr</span>
+              </button>
+            </div>
+            <!-- 가입버튼 -->
+            <button type="submit" class="col-start-4 col-end-2 justify-end rounded-3xl px-3 py-2 border-2 border-transparent outline-none cursor-pointer whitespace-nowrap font-bold bg-white text-black hover:bg-gray-500 focus:border-blue-400">가입하기</button>
+            <button class="block cursor-pointer xl:hidden" type="button" aria-label="메뉴 열기">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 10L6 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M18 14L6 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </header>
+      <section class="banner grid col-start-1 -col-end-1 text-black leading-1.5 relative overflow-hidden gap-3" role="banner">
+        <img src="/src/assets/banner.webp" alt="우리들의 택시 UT 배너" fetchpriority="high" class="banner-image w-screen h-full object-cover z-0 absolute" />
+        <div class="banner-wrap flex flex-col px-6 py-10 gap-7 z-1 relative mx-0 my-0 justify-start items-start xl:justify-center xl:gap-12 xl:p-16 xl:px-[10vw]">
+          <h1 class="title-ut text-3xl sm:text-4xl lg:text-5xl font-bold leading-[140%] col-span-2">우리들의 택시, UT</h1>
+          <p class="text-base">UT로 안전하고 편안한 차량 서비스를 이용하세요.</p>
+          <button type="button" class="buttons icon-button-component show-icon" onclick="window.open('/')">
+            <svg class="icon-download w-6 h-6" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M6.29289 9.70711L11.2929 14.7071L12 15.4142L12.7071 14.7071L17.7071 9.70711L16.2929 8.29289L13 11.5858V4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H11L11 11.5858L7.70711 8.29289L6.29289 9.70711Z"
+                fill="white"
+              />
+            </svg>
+            <span>앱 다운로드</span>
+          </button>
+        </div>
+      </section>
+      <section class="grid grid-cols-subgrid col-start-2 -col-end-2 md:grid-cols-2 justify-center px-4 py-10 min-w-[320px] gap-x-9 gap-y-9 md:p-16">
+        <article class="col-span-full md:col-span-1 flex flex-col gap-3">
+          <div aria-hidden="true">
+            <svg class="w-6 h-6" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8 18.771V10.771M8 18.771L1.83752 14.3692C1.42695 14.076 1.22166 13.9293 1.11083 13.714C1 13.4986 1 13.2463 1 12.7418V5.771M8 18.771L14.1625 14.3692C14.573 14.076 14.7783 13.9293 14.8892 13.714C15 13.4986 15 13.2463 15 12.7418V5.771M8 10.771L1 5.771M8 10.771L15 5.771M1 5.771L6.83752 1.60134C7.39886 1.20038 7.67953 0.9999 8 0.9999C8.32047 0.9999 8.60114 1.20038 9.16248 1.60134L15 5.771"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <h3 class="font-semibold">회사소개</h3>
+          <p>UT의 회사 연혁과 핵심 가치 및 UT가 창출하는 다양한 기회에 대해 알아보세요.</p>
+          <div>
+            <a class="more-btn" href="/" aria-label="UT 회사소개 자세히보기 ">자세히보기</a>
+          </div>
+        </article>
+        <article class="col-span-full md:col-span-1 flex flex-col gap-3">
+          <div aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="5" y="4" width="14" height="17" rx="2" stroke="currentColor" stroke-width="2" />
+              <path d="M9 9H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M9 13H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M9 17H13" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3 class="font-semibold">뉴스룸</h3>
+          <p>UT의 회사 연혁과 핵심 가치 및 UT가 창출하는 다양한 기회에 대해 알아보세요.</p>
+          <div>
+            <a class="more-btn" href="/" aria-label="UT 뉴스룸 자세히보기 ">자세히보기</a>
+          </div>
+        </article>
+      </section>
+      <section class="grid xl:gap-x-9 gap-y-9 grid-cols-subgrid grid-rows-[auto_repeat(2,max-content)] xl:grid-rows-[auto_max-content] col-span-full bg-neutral-100 px-6 xl:px-8 py-10 xl:py-14 xl:p-16">
+        <h1 class="col-start-2 col-span-10 text-black font-bold text-2xl md:text-3xl xl:text-4xl leading-7">UT 앱에서 더욱 다양한 기능을 만나보세요</h1>
+        <a href="#" class="col-start-2 xl:col-start-2 col-span-10 xl:col-span-5 min-w-max flex flex-row flex-nowrap items-center gap-9 bg-white p-4 md:p-8 xl:p-11">
+          <div class="size-[104px] shrink-0">
+            <img src="/logo.svg" alt="UT 로고" />
+          </div>
+          <span class="min-w-max flex-1 text-xl font-semibold leading-8">승객 앱 다운로드</span>
+          <div class="size-14 justify-self-end">
+            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+              <path
+                d="M46.6666 28L47.3737 27.2929L48.0808 28L47.3737 28.7071L46.6666 28ZM11.6666 29C11.1143 29 10.6666 28.5523 10.6666 28C10.6666 27.4477 11.1143 27 11.6666 27V29ZM33.3737 13.2929L47.3737 27.2929L45.9595 28.7071L31.9595 14.7071L33.3737 13.2929ZM47.3737 28.7071L33.3737 42.7071L31.9595 41.2929L45.9595 27.2929L47.3737 28.7071ZM46.6666 29H11.6666V27H46.6666V29Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </a>
+        <a href="#" class="col-start-2 xl:col-start-7 col-span-10 xl:col-span-5 min-w-max flex flex-row flex-nowrap items-center gap-9 bg-white p-4 md:p-8 xl:p-11">
+          <div class="size-[104px] shrink-0">
+            <img src="/logo.svg" alt="UT 로고" />
+          </div>
+          <span class="min-w-max flex-1 text-xl font-semibold leading-8">기사 앱 다운로드</span>
+          <div class="size-14 justify-self-end">
+            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+              <path
+                d="M46.6666 28L47.3737 27.2929L48.0808 28L47.3737 28.7071L46.6666 28ZM11.6666 29C11.1143 29 10.6666 28.5523 10.6666 28C10.6666 27.4477 11.1143 27 11.6666 27V29ZM33.3737 13.2929L47.3737 27.2929L45.9595 28.7071L31.9595 14.7071L33.3737 13.2929ZM47.3737 28.7071L33.3737 42.7071L31.9595 41.2929L45.9595 27.2929L47.3737 28.7071ZM46.6666 29H11.6666V27H46.6666V29Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </a>
+      </section>
+      <section class="grid gap-y-9 grid-cols-subgrid col-start-1 -col-end-1 p-4 md:p-8 xl:p-11">
+        <h1 class="col-start-2 col-span-10 xl:col-start-2 xl:row-span-4 xl:col-span-5 xl:justify-self-start xl:self-center text-black text-4xl xl:text-5xl font-bold leading-[1.4]">UT로 운행하기</h1>
+        <p class="col-start-2 xl:col-start-7 col-span-3 self-center text-xl text-black font-semibold leading-8">기사로 가입하기</p>
+        <a href="/" class="col-start-10 col-span-2 justify-self-end self-center text-[16px] font-semibold border-b-[1px] border-neutral-400 hover:border-neutral-800 p-1">자세히보기</a>
+        <form action="#" class="grid grid-cols-subgrid grid-rows-[repeat(4,max-content)] col-start-2 xl:col-start-7 col-span-10 xl:col-span-5">
+          <fieldset class="contents">
+            <legend class="sr-only">폼 입력 내용</legend>
+            <div class="xl:w-[125%] row-start-2 col-start-1 col-span-5 xl:col-span-2 group">
+              <label for="form-input-1" class="sr-only">이름</label>
+              <input type="text" name="user-first-name" id="form-input-1" class="input-component" required aria-required="true" aria-errormessage="error-messge-1" placeholder="이름" pattern="[가-힣]{2,20}" />
+              <span id="error-messge-1" class="error-message">이름은 2~20자 사이 한글로 입력해 주세요.</span>
+            </div>
+            <div class="xl:w-[125%] row-start-2 col-start-6 xl:col-start-4 col-span-5 xl:col-span-2 xl:justify-self-end group">
+              <label for="form-input-2" class="sr-only">성</label>
+              <input type="text" name="user-last-name" id="form-input-2" class="input-component" required aria-required="true" aria-errormessage="error-messge-2" placeholder="성" pattern="[가-힣]{1,2}" />
+              <span id="error-messge-2" class="error-message">성은 1~2자 사이 한글로 입력해 주세요.</span>
+            </div>
+            <div class="row-start-3 col-span-full group">
+              <label for="form-input-3" class="sr-only">이메일</label>
+              <input type="email" name="user-email" id="form-input-3" class="input-component" required aria-required="true" aria-errormessage="error-messge-3" placeholder="이메일" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" />
+              <span id="error-messge-3" class="error-message">이메일의 형식에 맞게 입력해 주세요.</span>
+            </div>
+            <div class="row-start-4 col-span-full group grid">
+              <label for="form-input-4" class="sr-only">비밀번호</label>
+              <input
+                type="password"
+                name="user-password"
+                id="form-input-4"
+                class="input-component row-start-1 col-start-1"
+                required
+                aria-required="true"
+                aria-errormessage="error-messge-4"
+                placeholder="비밀번호"
+                minlength="8"
+                maxlength="16"
+                pattern="(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}"
+              />
+              <input type="checkbox" id="togglePassword" class="row-start-1 col-start-1 justify-self-end self-center mr-3 size-6 appearance-none bg-[url(/show-pw.svg)] checked:bg-[url(/hide-pw.svg)]" />
+              <span id="error-messge-4" class="error-message">비밀번호는 8~16자 사이 영문, 숫자, 특수문자를 포함해서 입력해 주세요.</span>
+            </div>
+            <div class="row-start-5 col-span-full group">
+              <label for="form-input-5" class="sr-only">전화번호</label>
+              <input type="tel" name="user-phone" id="form-input-5" class="input-component" required aria-required="true" aria-errormessage="error-messge-5" placeholder="전화번호" pattern="010-\d{3,4}-\d{4}" />
+              <span id="error-messge-5" class="error-message">전화번호의 형식에 맞게 입력해 주세요.</span>
+            </div>
+            <div class="row-start-6 col-span-full group">
+              <label for="form-input-6" class="sr-only">주소</label>
+              <input type="text" name="user-address" id="form-input-6" class="input-component" required aria-required="true" aria-errormessage="error-messge-6" placeholder="주소" value="Seoul, Korea, Republic of (South Korea)" />
+              <span id="error-messge-6" class="error-message">주소의 형식에 맞게 입력해 주세요.</span>
+            </div>
+          </fieldset>
+        </form>
+        <p class="row-start-4 xl:row-start-3 col-start-2 xl:col-start-7 col-span-10 xl:col-span-5 text-xs text-black leading-5">
+          ‘계속'을 선택하면 약관과 개인정보 보호정책을 확인했으며 이에 동의한 것으로 간주됩니다. 또한 위에 입력한 번호로 UT LLC 및 그 제휴가(통칭하여 ‘UT’)가 ARS 등을 이용하여 정보제공이나 마케팅 목적으로 발신하는 전화나 SMS 메시지를 수신하는 데 동의합니다. 마케팅 메시지 수신 동의는 UT 서비스 이용을
+          위한 필수 조건은 아닙니다. 더 이상 메시지 수신을 원하지 않으시는 경우, 89203번으로 ‘STOP’이라고 문자 메시지를 보내 수신을 거부하실 수 있습니다.
+        </p>
+        <div class="flex gap-9 items-center justify-start row-start-5 xl:row-start-4 col-start-2 xl:col-start-7 col-span-10 xl:col-span-5">
+          <button type="submit" class="text-neutral-200 bg-neutral-950 hover:bg-neutral-600 font-semibold text-[16px] leading-6 px-6 py-4" aria-label="UT 서비스 기사로 가입하기 버튼">가입하기</button>
+          <span class="text-xs text-black leading-5">이미 계정이 있으신가요?</span>
+          <a href="/" class="min-w-max text-[16px] font-semibold border-b-[1px] border-neutral-400 hover:border-neutral-800 p-1" aria-label="로그인 페이지로 이동하기">로그인</a>
+        </div>
+      </section>
+      <footer class="grid gap-y-16 grid-cols-subgrid col-span-full bg-neutral-950 text-white px-6 py-10 md:px-8 md:py-14 xl:p-16">
+        <h1 class="sr-only">UT 페이지 Footer</h1>
+        <div class="grid gap-y-7 grid-cols-subgrid col-start-2 col-span-10">
+          <div class="col-span-1 w-10">
+            <img src="/logo-dark.svg" alt="UT 다크모드 로고" />
+          </div>
+          <a href="#" class="col-span-10 text-[16px] font-semibold leading-6" aria-label="고객지원 센터 방문하기">고객지원 센터로 가기</a>
+        </div>
+        <div class="col-start-2 col-span-10 grid grid-cols-[repeat(3,1fr)] grid-rows-[repeat(5,minmax(0,max-content))]">
+          <div class="row-span-5 grid grid-rows-subgrid gap-4 place-items-start">
+            <h2 class="text-xl font-semibold leading-6 mb-5">기업 정보</h2>
+            <ul class="text-[16px] font-semibold leading-6 contents">
+              <li><a href="#" aria-label="회사 소개 보러가기">회사 소개</a></li>
+              <li><a href="#" aria-label="뉴스룸 방문하기">뉴스룸</a></li>
+              <li><a href="#" aria-label="블로그 방문하기">블로그</a></li>
+              <li><a href="#" aria-label="비즈니스 정보 보러가기">비즈니스 정보</a></li>
+            </ul>
+          </div>
+          <div class="row-span-5 grid grid-rows-subgrid gap-4 justify-self-start md:justify-self-center xl:justify-self-start items-start">
+            <h2 class="text-xl font-semibold leading-6">상품</h2>
+            <ul class="text-[16px] font-semibold leading-6 contents">
+              <li><a href="#" aria-label="차량 서비스 상품으로 이동하기">차량 서비스</a></li>
+              <li><a href="#" aria-label="운행 상품으로 이동하기">운행</a></li>
+            </ul>
+          </div>
+          <div class="row-span-5 grid grid-rows-subgrid gap-4 justify-self-end xl:justify-self-start items-start">
+            <h2 class="text-xl font-semibold leading-6">글로벌 시민 의식</h2>
+            <a href="#" class="text-[16px] font-semibold leading-6" aria-label="글로벌 시민의식 안전에 대해 보러가기">안전</a>
+          </div>
+        </div>
+        <div id="sns-location-lang" class="col-start-2 col-span-10 flex flex-row flex-wrap justify-between gap-9">
+          <div class="min-w-[236px] mr-30 flex flex-row flex-nowrap justify-between">
+            <a href="#" aria-label="페이스북으로 이동하기"><img class="size-4" src="/src/assets/facebook.svg" alt="facebook 아이콘" /></a>
+            <a href="#" aria-label="유튜브로 이동하기"><img class="size-4" src="/src/assets/youtube.svg" alt="youtube 아이콘" /></a>
+            <a href="#" aria-label="인스타그램으로 이동하기"><img class="size-4" src="/src/assets/instagram.svg" alt="instagram 아이콘" /></a>
+          </div>
+          <div class="min-w-[186px] flex flex-row flex-nowrap justify-between">
+            <div class="flex gap-1" aria-describedby="current-lang">
+              <img class="size-6" src="/src/assets/world.svg" alt="현재 언어 정보 아이콘" />
+              <span class="text-[16px] font-bold">한국어</span>
+              <p id="current-lang">현재 언어 정보</p>
+            </div>
+            <div class="flex gap-1" aria-describedby="current-location">
+              <img class="size-6" src="/src/assets/pin.svg" alt="현재 위치 정보 아이콘" />
+              <span class="text-[16px] font-bold">서울</span>
+              <p id="current-location" class="sr-only">현재 위치 정보</p>
+            </div>
+          </div>
+          <div class="min-w-[271px] max-md:w-full flex flex-row flex-nowrap gap-4">
+            <a href="#" aria-label="구글 플레이스토어로 이동하기">
+              <img src="/src/assets/google-play.svg" alt="구글 플레이스토어 이미지" />
+            </a>
+            <a href="#" aria-label="앱스토어로 이동하기">
+              <img src="/src/assets/app-store.svg" alt="앱스토어 이미지" />
+            </a>
+          </div>
+        </div>
+        <div id="company-info" class="col-start-2 col-span-10 flex flex-row flex-wrap gap-9 justify-between text-zinc-400/80 text-xs leading-5">
+          <p class="min-w-max">© 2022 UT LLC</p>
+          <p class="min-w-[332px] w-full max-w-[427px]">법인명: UT LLC | 사업자 등록 번호: 166-86-02049 | 회사 대표번호: 080-800-5555 | 대표: White Thomas Darcy | 회사 주소: 서울특별시 중구 삼일대로 343 | 통신판매번호: 2021-서울중구-0976</p>
+          <div class="flex gap-8">
+            <a href="#" class="min-w-max" aria-label="개인정보 보호 보러가기">개인정보 보호</a>
+            <a href="#" class="min-w-max" aria-label="약관 보러가기">약관</a>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
