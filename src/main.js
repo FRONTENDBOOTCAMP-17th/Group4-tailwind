@@ -1,16 +1,16 @@
 import './style.css';
 
-const passwordInput = document.querySelector('#form-input-4');
-const togglePassword = document.querySelector('#togglePassword');
+// const passwordInput = document.querySelector('#form-input-4');
+// const togglePassword = document.querySelector('#togglePassword');
 
-togglePassword.addEventListener('change', (e) => {
-  let type = '';
+// togglePassword.addEventListener('change', (e) => {
+//   let type = '';
 
-  if (e.target.checked) {
-    type = 'text';
-  } else {
-    type = 'password';
-  }
+//   if (e.target.checked) {
+//     type = 'text';
+//   } else {
+//     type = 'password';
+//   }
 
-  passwordInput.type = type;
-});
+//   passwordInput.type = type;
+// });

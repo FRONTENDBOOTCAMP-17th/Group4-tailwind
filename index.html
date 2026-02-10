@@ -231,6 +231,72 @@
           <a href="/" class="text-[16px] font-semibold border-b-[1px] border-neutral-400 hover:border-neutral-800 p-1" aria-label="로그인 페이지로 이동하기">로그인</a>
         </div>
       </section>
+      <footer class="grid gap-y-16 grid-cols-subgrid col-span-full bg-neutral-950 text-white px-6 py-10 md:px-8 md:py-14 xl:p-16">
+        <h1 class="sr-only">UT 페이지 Footer</h1>
+        <div class="grid gap-y-7 grid-cols-subgrid col-start-2 col-span-10">
+          <div class="col-span-1 w-10">
+            <img src="/logo-dark.svg" alt="UT 다크모드 로고" />
+          </div>
+          <a href="#" class="col-span-10 text-[16px] font-semibold leading-6" aria-label="고객지원 센터 방문하기">고객지원 센터로 가기</a>
+        </div>
+        <div class="col-start-2 col-span-10 grid grid-cols-[repeat(3,1fr)] grid-rows-[repeat(5,minmax(0,max-content))]">
+          <div class="row-span-5 grid grid-rows-subgrid gap-4 place-items-start">
+            <h2 class="text-xl font-semibold leading-6 mb-5">기업 정보</h2>
+            <ul class="text-[16px] font-semibold leading-6 contents">
+              <li><a href="#" aria-label="회사 소개 보러가기">회사 소개</a></li>
+              <li><a href="#" aria-label="뉴스룸 방문하기">뉴스룸</a></li>
+              <li><a href="#" aria-label="블로그 방문하기">블로그</a></li>
+              <li><a href="#" aria-label="비즈니스 정보 보러가기">비즈니스 정보</a></li>
+            </ul>
+          </div>
+          <div class="row-span-5 grid grid-rows-subgrid gap-4 justify-self-start md:justify-self-center xl:justify-self-start items-start">
+            <h2 class="text-xl font-semibold leading-6">상품</h2>
+            <ul class="text-[16px] font-semibold leading-6 contents">
+              <li><a href="#" aria-label="차량 서비스 상품으로 이동하기">차량 서비스</a></li>
+              <li><a href="#" aria-label="운행 상품으로 이동하기">운행</a></li>
+            </ul>
+          </div>
+          <div class="row-span-5 grid grid-rows-subgrid gap-4 justify-self-end xl:justify-self-start items-start">
+            <h2 class="text-xl font-semibold leading-6">글로벌 시민 의식</h2>
+            <a href="#" class="text-[16px] font-semibold leading-6" aria-label="글로벌 시민의식 안전에 대해 보러가기">안전</a>
+          </div>
+        </div>
+        <div id="sns-location-lang" class="col-start-2 col-span-10 flex flex-row flex-wrap justify-between gap-9">
+          <div class="min-w-[236px] mr-30 flex flex-row flex-nowrap justify-between">
+            <a href="#" aria-label="페이스북으로 이동하기"><img class="size-4" src="/src/assets/facebook.svg" alt="facebook 아이콘" /></a>
+            <a href="#" aria-label="유튜브로 이동하기"><img class="size-4" src="/src/assets/youtube.svg" alt="youtube 아이콘" /></a>
+            <a href="#" aria-label="인스타그램으로 이동하기"><img class="size-4" src="/src/assets/instagram.svg" alt="instagram 아이콘" /></a>
+          </div>
+          <div class="min-w-[186px] flex flex-row flex-nowrap justify-between">
+            <div class="flex gap-1" aria-describedby="current-lang">
+              <img class="size-6" src="/src/assets/world.svg" alt="현재 언어 정보 아이콘" />
+              <span class="text-[16px] font-bold">한국어</span>
+              <p id="current-lang">현재 언어 정보</p>
+            </div>
+            <div class="flex gap-1" aria-describedby="current-location">
+              <img class="size-6" src="/src/assets/pin.svg" alt="현재 위치 정보 아이콘" />
+              <span class="text-[16px] font-bold">서울</span>
+              <p id="current-location" class="sr-only">현재 위치 정보</p>
+            </div>
+          </div>
+          <div class="min-w-[271px] max-md:w-full flex flex-row flex-nowrap gap-4">
+            <a href="#" aria-label="구글 플레이스토어로 이동하기">
+              <img src="/src/assets/google-play.svg" alt="구글 플레이스토어 이미지" />
+            </a>
+            <a href="#" aria-label="앱스토어로 이동하기">
+              <img src="/src/assets/app-store.svg" alt="앱스토어 이미지" />
+            </a>
+          </div>
+        </div>
+        <div id="company-info" class="col-start-2 col-span-10 flex flex-row flex-wrap gap-9 justify-between text-zinc-400/80 text-xs leading-5">
+          <p class="min-w-max">© 2022 UT LLC</p>
+          <p class="min-w-[332px] w-full max-w-[427px]">법인명: UT LLC | 사업자 등록 번호: 166-86-02049 | 회사 대표번호: 080-800-5555 | 대표: White Thomas Darcy | 회사 주소: 서울특별시 중구 삼일대로 343 | 통신판매번호: 2021-서울중구-0976</p>
+          <div class="flex gap-8">
+            <a href="#" class="min-w-max" aria-label="개인정보 보호 보러가기">개인정보 보호</a>
+            <a href="#" class="min-w-max" aria-label="약관 보러가기">약관</a>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
