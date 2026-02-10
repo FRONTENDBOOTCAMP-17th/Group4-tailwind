@@ -1,4 +1,5 @@
 import './style.css';
+import './accordion-components.js';
 
 const passwordInput = document.querySelector('#form-input-4');
 const togglePassword = document.querySelector('#togglePassword');
