@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+/* 여기에 사용자 정의 스타일시트 import */
+
+@theme {
+  --font-sans: 'Pretendard Variable', sans-serif;
+}
