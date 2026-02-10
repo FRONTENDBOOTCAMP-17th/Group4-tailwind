@@ -12,4 +12,8 @@
   .error-message {
     @apply opacity-0 group-has-user-invalid:opacity-100 text-red-500 text-xs;
   }
+
+  .nav-content {
+    @apply px-2 py-1 flex items-center gap-1 cursor-pointer;
+  }
 }
