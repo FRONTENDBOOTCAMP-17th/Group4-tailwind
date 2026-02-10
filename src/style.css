@@ -18,9 +18,9 @@
   }
 
   .more-btn {
-    @apply p-1 border-b-2 font-medium border-gray-400 hover:border-black focus:border-blue-400 focus:border-2;
+    @apply p-1 border-b-2 font-medium border-gray-400 hover:border-black focus:border-blue-400 focus:border-2 outline-0 ;
   }
-  
+
   .icon-button-component {
     @apply w-[149px] flex flex-row flex-nowrap min-w-max w-fit px-6 py-4 border-0 font-semibold leading-normal text-white bg-black gap-1 hover:bg-neutral-600 disabled:bg-neutral-600 disabled:pointer-events-none focus:outline-2 focus:outline-blue-600;
   }
