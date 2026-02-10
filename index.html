@@ -16,7 +16,7 @@
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
-    <div class="mx-auto grid gap-4 grid-cols-[8px_repeat(10,minmax(18px,1fr))_8px] md:grid-cols-[16px_repeat(10,minmax(45px,1fr))_16px] xl:grid-cols-12">
+    <div class="mx-auto grid gap-x-4 grid-cols-[8px_repeat(10,minmax(18px,1fr))_8px] md:grid-cols-[16px_repeat(10,minmax(45px,1fr))_16px] xl:grid-cols-12">
       <!-- 여기에 템플릿 코드 작성 / subgrid로 12컬럼 그리드 배치를 상속받고 템플릿의 배치를 해당 그리드 안에서 하면 됨-->
       <header class="grid grid-cols-subgrid col-span-full bg-black text-white xl:py-3">
         <nav class="col-start-2 -col-end-2 grid grid-cols-subgrid items-center py-3 xl:px-16">
@@ -130,7 +130,7 @@
               />
             </svg>
           </div>
-          <h3 class="font-semibold">회사소개</h3>
+          <h2 class="font-semibold">회사소개</h2>
           <p>UT의 회사 연혁과 핵심 가치 및 UT가 창출하는 다양한 기회에 대해 알아보세요.</p>
           <div>
             <a class="more-btn" href="/" aria-label="UT 회사소개 자세히보기 ">자세히보기</a>
@@ -145,7 +145,7 @@
               <path d="M9 17H13" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
             </svg>
           </div>
-          <h3 class="font-semibold">뉴스룸</h3>
+          <h2 class="font-semibold">뉴스룸</h2>
           <p>UT의 회사 연혁과 핵심 가치 및 UT가 창출하는 다양한 기회에 대해 알아보세요.</p>
           <div>
             <a class="more-btn" href="/" aria-label="UT 뉴스룸 자세히보기 ">자세히보기</a>
@@ -183,10 +183,88 @@
           </div>
         </a>
       </section>
+      <section id="accordion-components-wrap" class="grid col-start-1 -col-end-1 py-10 px-6 md:py-14 md:px-8 xl:p-16 xl:px-[10vw]" role="region" aria-labelledby="faq-title">
+        <h3 id="faq-title" class="accordion-title md:text-3xl xl:text-4xl text-xl font-bold mb-9">자주 하는 질문</h3>
+        <div class="accordion-components" role="group">
+          <button type="button" class="accordion-head" aria-expanded="false" aria-controls="faq1">미터기 요금을 중복으로 결제하였습니다 (앱+현장)</button>
+          <div id="faq1" class="accordion-body" hidden>
+            <div class="accordion-body-inner">
+              <p>비슷한 금액의 요금이 중복 청구 된 경우 아래와 같이 생각하실 수 있습니다.</p>
+              <ol>
+                <li>가족 또는 지인이 동일한 카드를 등록하여 사용하지 않았는지 확인해보세요.</li>
+                <li>우연히 같은 요금의 다른 차량 서비스를 이용하지 않았는지 확인해보는 것이 좋습니다.</li>
+                <li>어떠한 이유로 잘못 청구된 여정 요금이 변경된 경우가 없는지 확인해 보세요. 요금이 변경되면 업데이트 된 영수증이 발급됩니다.</li>
+              </ol>
+              <p>앱 결제 차량에서 실수로 현장에서 요금을 지불하여 중복 결제가 된 경우 결제된 카드 내역 또는 영수증 캡처하여 아래 링크를 통해 알려주세요.</p>
+              <strong>[고객지원 > 여정 및 요금 > 내 요금 및 수수료 검토 > 미터기 요금을 중복으로 결제하였습니다]</strong>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-components" role="group">
+          <button type="button" class="accordion-head" aria-expanded="false" aria-controls="faq2">미터기 요금 외에 다른 요금이 결제 됐습니다. (통행료, 가승인 등)</button>
+          <div id="faq2" class="accordion-body" hidden>
+            <div class="accordion-body-inner">
+              <p>비슷한 금액의 요금이 중복 청구 된 경우 아래와 같이 생각하실 수 있습니다.</p>
+              <ol>
+                <li>가족 또는 지인이 동일한 카드를 등록하여 사용하지 않았는지 확인해보세요.</li>
+                <li>우연히 같은 요금의 다른 차량 서비스를 이용하지 않았는지 확인해보는 것이 좋습니다.</li>
+                <li>어떠한 이유로 잘못 청구된 여정 요금이 변경된 경우가 없는지 확인해 보세요. 요금이 변경되면 업데이트 된 영수증이 발급됩니다.</li>
+              </ol>
+              <p>앱 결제 차량에서 실수로 현장에서 요금을 지불하여 중복 결제가 된 경우 결제된 카드 내역 또는 영수증 캡처하여 아래 링크를 통해 알려주세요.</p>
+              <strong>[고객지원 > 여정 및 요금 > 내 요금 및 수수료 검토 > 미터기 요금을 중복으로 결제하였습니다]</strong>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-components" role="group">
+          <button type="button" class="accordion-head" aria-expanded="false" aria-controls="faq3">분실물과 관련해 기사에게 연락하기</button>
+          <div id="faq3" class="accordion-body" hidden>
+            <div class="accordion-body-inner">
+              <p>비슷한 금액의 요금이 중복 청구 된 경우 아래와 같이 생각하실 수 있습니다.</p>
+              <ol>
+                <li>가족 또는 지인이 동일한 카드를 등록하여 사용하지 않았는지 확인해보세요.</li>
+                <li>우연히 같은 요금의 다른 차량 서비스를 이용하지 않았는지 확인해보는 것이 좋습니다.</li>
+                <li>어떠한 이유로 잘못 청구된 여정 요금이 변경된 경우가 없는지 확인해 보세요. 요금이 변경되면 업데이트 된 영수증이 발급됩니다.</li>
+              </ol>
+              <p>앱 결제 차량에서 실수로 현장에서 요금을 지불하여 중복 결제가 된 경우 결제된 카드 내역 또는 영수증 캡처하여 아래 링크를 통해 알려주세요.</p>
+              <strong>[고객지원 > 여정 및 요금 > 내 요금 및 수수료 검토 > 미터기 요금을 중복으로 결제하였습니다]</strong>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-components" role="group">
+          <button type="button" class="accordion-head" aria-expanded="false" aria-controls="faq4">택시가 잡혀 기다렸으나 저와는 반대방향으로 이동했어요.</button>
+          <div id="faq4" class="accordion-body" hidden>
+            <div class="accordion-body-inner">
+              <p>비슷한 금액의 요금이 중복 청구 된 경우 아래와 같이 생각하실 수 있습니다.</p>
+              <ol>
+                <li>가족 또는 지인이 동일한 카드를 등록하여 사용하지 않았는지 확인해보세요.</li>
+                <li>우연히 같은 요금의 다른 차량 서비스를 이용하지 않았는지 확인해보는 것이 좋습니다.</li>
+                <li>어떠한 이유로 잘못 청구된 여정 요금이 변경된 경우가 없는지 확인해 보세요. 요금이 변경되면 업데이트 된 영수증이 발급됩니다.</li>
+              </ol>
+              <p>앱 결제 차량에서 실수로 현장에서 요금을 지불하여 중복 결제가 된 경우 결제된 카드 내역 또는 영수증 캡처하여 아래 링크를 통해 알려주세요.</p>
+              <strong>[고객지원 > 여정 및 요금 > 내 요금 및 수수료 검토 > 미터기 요금을 중복으로 결제하였습니다]</strong>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-components" role="group">
+          <button type="button" class="accordion-head" aria-expanded="false" aria-controls="faq5">프로모션 코드가 적용되지 않았습니다.</button>
+          <div id="faq5" class="accordion-body" hidden>
+            <div class="accordion-body-inner">
+              <p>비슷한 금액의 요금이 중복 청구 된 경우 아래와 같이 생각하실 수 있습니다.</p>
+              <ol>
+                <li>가족 또는 지인이 동일한 카드를 등록하여 사용하지 않았는지 확인해보세요.</li>
+                <li>우연히 같은 요금의 다른 차량 서비스를 이용하지 않았는지 확인해보는 것이 좋습니다.</li>
+                <li>어떠한 이유로 잘못 청구된 여정 요금이 변경된 경우가 없는지 확인해 보세요. 요금이 변경되면 업데이트 된 영수증이 발급됩니다.</li>
+              </ol>
+              <p>앱 결제 차량에서 실수로 현장에서 요금을 지불하여 중복 결제가 된 경우 결제된 카드 내역 또는 영수증 캡처하여 아래 링크를 통해 알려주세요.</p>
+              <strong>[고객지원 > 여정 및 요금 > 내 요금 및 수수료 검토 > 미터기 요금을 중복으로 결제하였습니다]</strong>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="grid gap-y-9 grid-cols-subgrid col-start-1 -col-end-1 p-4 md:p-8 xl:p-11">
         <h1 class="col-start-2 col-span-10 xl:col-start-2 xl:row-span-4 xl:col-span-5 xl:justify-self-start xl:self-center text-black text-4xl xl:text-5xl font-bold leading-[1.4]">UT로 운행하기</h1>
         <p class="col-start-2 xl:col-start-7 col-span-3 self-center text-xl text-black font-semibold leading-8">기사로 가입하기</p>
-        <a href="/" class="col-start-10 col-span-2 justify-self-end self-center text-[16px] font-semibold border-b-[1px] border-neutral-400 hover:border-neutral-800 p-1">자세히보기</a>
+        <a href="/" class="col-start-10 col-span-2 justify-self-end self-center text-[16px] font-semibold border-b-[1px] border-neutral-400 hover:border-neutral-800 p-1 focus:outline-2 focus:outline-blue-600">자세히보기</a>
         <form action="#" class="grid grid-cols-subgrid grid-rows-[repeat(4,max-content)] col-start-2 xl:col-start-7 col-span-10 xl:col-span-5">
           <fieldset class="contents">
             <legend class="sr-only">폼 입력 내용</legend>
@@ -240,9 +318,9 @@
           위한 필수 조건은 아닙니다. 더 이상 메시지 수신을 원하지 않으시는 경우, 89203번으로 ‘STOP’이라고 문자 메시지를 보내 수신을 거부하실 수 있습니다.
         </p>
         <div class="flex gap-9 items-center justify-start row-start-5 xl:row-start-4 col-start-2 xl:col-start-7 col-span-10 xl:col-span-5">
-          <button type="submit" class="text-neutral-200 bg-neutral-950 hover:bg-neutral-600 font-semibold text-[16px] leading-6 px-6 py-4" aria-label="UT 서비스 기사로 가입하기 버튼">가입하기</button>
+          <button type="submit" class="text-neutral-200 bg-neutral-950 hover:bg-neutral-600 font-semibold text-[16px] leading-6 px-6 py-4 disabled:bg-neutral-600 disabled:pointer-events-none focus:outline-2 focus:outline-blue-600" aria-label="UT 서비스 기사로 가입하기 버튼">가입하기</button>
           <span class="text-xs text-black leading-5">이미 계정이 있으신가요?</span>
-          <a href="/" class="min-w-max text-[16px] font-semibold border-b-[1px] border-neutral-400 hover:border-neutral-800 p-1" aria-label="로그인 페이지로 이동하기">로그인</a>
+          <a href="/" class="min-w-max text-[16px] font-semibold border-b-[1px] border-neutral-400 hover:border-neutral-800 p-1 focus:outline-2 focus:outline-blue-600" aria-label="로그인 페이지로 이동하기">로그인</a>
         </div>
       </section>
       <footer class="grid gap-y-16 grid-cols-subgrid col-span-full bg-neutral-950 text-white px-6 py-10 md:px-8 md:py-14 xl:p-16">
@@ -251,7 +329,7 @@
           <div class="col-span-1 w-10">
             <img src="/logo-dark.svg" alt="UT 다크모드 로고" />
           </div>
-          <a href="#" class="col-span-10 text-[16px] font-semibold leading-6" aria-label="고객지원 센터 방문하기">고객지원 센터로 가기</a>
+          <a href="#" class="w-fit col-span-10 text-[16px] font-semibold leading-6" aria-label="고객지원 센터 방문하기">고객지원 센터로 가기</a>
         </div>
         <div class="col-start-2 col-span-10 grid grid-cols-[repeat(3,1fr)] grid-rows-[repeat(5,minmax(0,max-content))]">
           <div class="row-span-5 grid grid-rows-subgrid gap-4 place-items-start">
@@ -272,20 +350,20 @@
           </div>
           <div class="row-span-5 grid grid-rows-subgrid gap-4 justify-self-end xl:justify-self-start items-start">
             <h2 class="text-xl font-semibold leading-6">글로벌 시민 의식</h2>
-            <a href="#" class="text-[16px] font-semibold leading-6" aria-label="글로벌 시민의식 안전에 대해 보러가기">안전</a>
+            <a href="#" class="w-fit text-[16px] font-semibold leading-6" aria-label="글로벌 시민의식 안전에 대해 보러가기">안전</a>
           </div>
         </div>
         <div id="sns-location-lang" class="col-start-2 col-span-10 flex flex-row flex-wrap justify-between gap-9">
           <div class="min-w-[236px] mr-30 flex flex-row flex-nowrap justify-between">
-            <a href="#" aria-label="페이스북으로 이동하기"><img class="size-4" src="/src/assets/facebook.svg" alt="facebook 아이콘" /></a>
-            <a href="#" aria-label="유튜브로 이동하기"><img class="size-4" src="/src/assets/youtube.svg" alt="youtube 아이콘" /></a>
-            <a href="#" aria-label="인스타그램으로 이동하기"><img class="size-4" src="/src/assets/instagram.svg" alt="instagram 아이콘" /></a>
+            <a href="#" class="size-4" aria-label="페이스북으로 이동하기"><img src="/src/assets/facebook.svg" alt="facebook 아이콘" /></a>
+            <a href="#" class="size-4" aria-label="유튜브로 이동하기"><img src="/src/assets/youtube.svg" alt="youtube 아이콘" /></a>
+            <a href="#" class="size-4" aria-label="인스타그램으로 이동하기"><img src="/src/assets/instagram.svg" alt="instagram 아이콘" /></a>
           </div>
           <div class="min-w-[186px] flex flex-row flex-nowrap justify-between">
             <div class="flex gap-1" aria-describedby="current-lang">
               <img class="size-6" src="/src/assets/world.svg" alt="현재 언어 정보 아이콘" />
               <span class="text-[16px] font-bold">한국어</span>
-              <p id="current-lang">현재 언어 정보</p>
+              <p id="current-lang" class="sr-only">현재 언어 정보</p>
             </div>
             <div class="flex gap-1" aria-describedby="current-location">
               <img class="size-6" src="/src/assets/pin.svg" alt="현재 위치 정보 아이콘" />
@@ -306,8 +384,8 @@
           <p class="min-w-max">© 2022 UT LLC</p>
           <p class="min-w-[332px] w-full max-w-[427px]">법인명: UT LLC | 사업자 등록 번호: 166-86-02049 | 회사 대표번호: 080-800-5555 | 대표: White Thomas Darcy | 회사 주소: 서울특별시 중구 삼일대로 343 | 통신판매번호: 2021-서울중구-0976</p>
           <div class="flex gap-8">
-            <a href="#" class="min-w-max" aria-label="개인정보 보호 보러가기">개인정보 보호</a>
-            <a href="#" class="min-w-max" aria-label="약관 보러가기">약관</a>
+            <a href="#" class="min-w-max h-fit" aria-label="개인정보 보호 보러가기">개인정보 보호</a>
+            <a href="#" class="min-w-max h-fit" aria-label="약관 보러가기">약관</a>
           </div>
         </div>
       </footer>

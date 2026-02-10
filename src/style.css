@@ -18,10 +18,35 @@
   }
 
   .more-btn {
-    @apply p-1 border-b-2 font-medium border-gray-400 hover:border-black focus:border-blue-400 focus:border-2;
+    @apply p-1 border-b-2 font-medium border-gray-400 hover:border-black focus:border-blue-400 focus:border-2 focus:outline-0;
   }
-  
+
   .icon-button-component {
-    @apply w-[149px] flex flex-row flex-nowrap min-w-max w-fit px-6 py-4 border-0 font-semibold leading-normal text-white bg-black gap-1 hover:bg-neutral-600 disabled:bg-neutral-600 disabled:pointer-events-none focus:outline-2 focus:outline-blue-600;
+    @apply flex flex-row flex-nowrap min-w-max w-fit px-6 py-4 border-0 font-semibold leading-normal text-white bg-black gap-1 hover:bg-neutral-600 disabled:bg-neutral-600 disabled:pointer-events-none focus:outline-2 focus:outline-blue-600;
+  }
+
+  .accordion-components-wrap {
+    @apply min-w-75 p-5 bg-transparent text-black text-base leading-1.5;
+  }
+  .accordion-head {
+    @apply font-semibold bg-transparent w-full border-0 relative text-left pt-4 pr-20 pb-4 pl-6 focus-visible:outline-1 focus-visible:outline-blue-600 focus-visible:outline-offset-[-1] z-1  aria-[expanded=false]:border-b aria-[expanded=false]:border-neutral-400;
+  }
+  .accordion-body {
+    @apply bg-transparent w-full;
+  }
+  .accordion-body-inner {
+    @apply p-6 pb-12 border-b border-neutral-300 font-normal space-y-6;
+
+    li {
+      @apply relative [counter-increment:item] before:content-[counter(item)'.\00a0'];
+    }
+    strong {
+      @apply inline-block border-b-[1.5px] border-gray-400;
+    }
+  }
+  .accordion-head::before,
+  .accordion-head::after {
+    @apply w-3 h-0.5 bg-black rounded-sm absolute top-1/2 -translate-y-1/2 right-5;
+    content: '';
   }
 }
