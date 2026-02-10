@@ -16,4 +16,8 @@
   .nav-content {
     @apply px-2 py-1 flex items-center gap-1 cursor-pointer;
   }
+
+  .more-btn {
+    @apply p-1 border-b-2 font-medium border-gray-400 hover:border-black focus:border-blue-400 focus:border-2;
+  }
 }
