@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nav | UT</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./main.js"></script>
+  </head>
+  <body>
+    <header class="bg-black text-white md:py-3">
+      <nav class="flex flex-row items-center justify-between px-6 py-3 md:px-16">
+        <div class="flex items-center gap-4">
+          <!-- 로고 -->
+          <a href="#" aria-label="홈으로 이동">
+            <div class="w-10 mr-6">
+              <img src="/public/logo-dark.svg" alt="" />
+            </div>
+          </a>
+          <!-- 메뉴 -->
+          <div class="hidden md:block">
+            <ul class="flex gap-1 whitespace-nowrap font-bold">
+              <li>
+                <div class="nav-content">
+                  <a href="#">안전</a>
+                </div>
+              </li>
+              <li>
+                <div class="nav-content">
+                  <a href="#">고객 지원</a>
+                </div>
+              </li>
+              <li>
+                <div class="nav-content">
+                  <a href="#">기업 정보</a>
+                  <button class="cursor-pointer" aria-label="하위 메뉴 열기" aria-expanded="false">
+                    <svg class="w-6 h-6 block" data-icon="down" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <path d="M18 9L12 15L6 9" stroke="white" stroke-width="2" />
+                    </svg>
+                    <svg class="w-6 h-6 hidden" viewBox="0 0 24 24" data-icon="up" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <path d="M18 15L12 9L6 15" stroke="white" stroke-width="2" />
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <div class="nav-content">
+                  <a href="#">차량 서비스</a>
+                </div>
+              </li>
+              <li>
+                <div class="nav-content">
+                  <a href="#">기사지원</a>
+                  <button class="cursor-pointer" aria-label="하위 메뉴 열기" aria-expanded="false">
+                    <svg class="w-6 h-6 block" data-icon="down" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <path d="M18 9L12 15L6 9" stroke="white" stroke-width="2" />
+                    </svg>
+                    <svg class="w-6 h-6 hidden" viewBox="0 0 24 24" data-icon="up" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <path d="M18 15L12 9L6 15" stroke="white" stroke-width="2" />
+                    </svg>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 언어 -->
+        <div class="flex items-center gap-3">
+          <div class="hidden md:block whitespace-nowrap">
+            <button class="flex items-center gap-1 uppercase cursor-pointer" type="button" aria-label="언어 선택 메뉴" aria-haspopup="listbox" aria-expanded="false">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <path
+                  d="M19.5 6L18.0333 7.1C17.6871 7.35964 17.2661 7.5 16.8333 7.5H13.475C12.8775 7.5 12.3312 7.83761 12.064 8.37206C11.7342 9.03161 11.9053 9.83161 12.476 10.2986L14.476 11.9349C16.0499 13.2227 16.8644 15.22 16.6399 17.2412L16.6199 17.4206C16.5403 18.1369 16.3643 18.8392 16.0967 19.5083L15.5 21"
+                  stroke="currentColor"
+                />
+                <path d="M2.5 10.5L5.7381 9.96032C7.09174 9.73471 8.26529 10.9083 8.03968 12.2619L7.90517 13.069C7.66434 14.514 8.3941 15.9471 9.70437 16.6022C10.7535 17.1268 11.2976 18.3097 11.0131 19.4476L10.5 21.5" stroke="currentColor" />
+                <circle cx="12" cy="12" r="9.5" stroke="currentColor" />
+              </svg>
+              <span class="inline-flex">ko-kr</span>
+            </button>
+          </div>
+          <!-- 가입버튼 -->
+          <button type="submit" class="rounded-3xl px-3 py-2 border-2 border-transparent outline-none cursor-pointer whitespace-nowrap font-bold bg-white text-black hover:bg-gray-500 focus:border-blue-400">가입하기</button>
+          <button class="block md:hidden" type="button" aria-label="메뉴 열기">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 10L6 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M18 14L6 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>

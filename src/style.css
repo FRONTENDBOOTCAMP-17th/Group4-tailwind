@@ -20,16 +20,7 @@
   .more-btn {
     @apply p-1 border-b-2 font-medium border-gray-400 hover:border-black focus:border-blue-400 focus:border-2;
   }
-}
-
-@layer components {
-  .input-component {
-    @apply w-full h-[50px] px-3 outline-0 bg-neutral-100/60 user-invalid:bg-red-500/10 user-valid:bg-green-500/10 text-black placeholder:text-neutral-500 border-[1px] user-invalid:border-2 user-valid:border-2 focus:border-2 border-neutral-300 user-invalid:border-red-600 user-valid:border-green-600 focus:border-black;
-  }
-  .error-message {
-    @apply opacity-0 group-has-user-invalid:opacity-100 text-red-500 text-xs;
-  }
-
+  
   .icon-button-component {
     @apply w-[149px] flex flex-row flex-nowrap min-w-max w-fit px-6 py-4 border-0 font-semibold leading-normal text-white bg-black gap-1 hover:bg-neutral-600 disabled:bg-neutral-600 disabled:pointer-events-none focus:outline-2 focus:outline-blue-600;
   }
